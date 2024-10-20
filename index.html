@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalConnect</title>
+    <!-- J-QUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="center-design">
+            <h1 class="animate-text">Legal-Connect</h1>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/sh.png" alt="Mind Space Logo" class="logo" />
+                <span class="brand-highlight">LegalConnect</span>
+            </a>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="#scrollFAQ">FAQs</a></li>
+                <li><a href="form.html">Reach Us</a></li>
+            </ul>
+
+            <!-- Search Feature -->
+            <form class="search-form" action="/search" method="GET">
+                <input type="text" class="search-input" placeholder="Search legal services..." name="query">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-images">
+            <img src="./images/WhatsApp Image 2024-10-20 at 10.34.05 AM.jpeg" alt="Showcase Image 1">
+            <img src="./images/WhatsApp Image 2024-10-20 at 10.34.06 AM.jpeg" alt="Showcase Image 2" class="active">
+            <img src="./images/WhatsApp Image 2024-10-20 at 10.35.32 AM (1).jpeg" alt="Showcase Image 4">
+            <img src="./images/WhatsApp Image 2024-10-20 at 10.35.32 AM.jpeg" alt="Showcase Image 6">
+            <img src="./images/WhatsApp Image 2024-10-20 at 10.35.33 AM.jpeg" alt="Showcase Image 6">
+        </div>
+        
+        <!-- Typewriter Effect Container -->
+        <div class="typewriter-container">
+            <div class="typewriter-text"></div>
+            <div class="changing-word"></div>
+        </div>
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="videoPlayer" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        </div>
+    <!-- /HERO SECTION -->
+    
+    <!-- CARDS SECTION -->
+    <section class="cards-section">
+        <p class="card-text">Where Trust Meets Expertise...</p>
+        <div class="cards-container">
+            <div class="card">
+                <img src="./images/WhatsApp Image 2024-10-20 at 12.48.46 PM.jpeg" alt="Card Image 1" class="card-image">
+                <div class="card-content" style="margin-top: .8rem;">
+                    <h3 class="card-title">Advocates</h3>
+                    <p class="caveat-text">What You Get..</p>
+                    <p class="card-description">Our experienced advocates offer legal representation in civil, criminal, corporate, and family law cases.</p>
+                    <a href="#" class="learn-more-button">Learn More</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="./images/WhatsApp Image 2024-10-20 at 12.58.01 PM.jpeg" alt="Card Image 2" class="card-image">
+                <div class="card-content" id="arbitrators">
+                    <h3 class="card-title">Arbitrators</h3>
+                    <p class="caveat-text">Perfect for you if..</p>
+                    <p class="card-description">We specialize in providing impartial arbitration services, delivering quick and fair resolutions for commercial.</p>
+                    <a href="#" class="learn-more-button" id="learn-more">Learn More</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="./images/WhatsApp Image 2024-10-20 at 12.54.16 PM.jpeg" alt="Card Image 3" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title" id="mediators">Mediators</h3>
+                    <p class="caveat-text">Get all of the benefits</p>
+                    <p class="card-description">Our certified mediators facilitate constructive communication between parties, helping resolve conflicts.</p>
+                    <a href="#" class="learn-more-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /CARDS SECTION -->
+
+    <!-- SERVICES -->
+    <div class="services-wrapper">
+        <h1>We provide best solutions,</h1>
+        <h1>meant for YOU!</h1>
+        <div class="card-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="card-content-2">
+                    <!-- <p>FULL OFFLINE</p> -->
+                    <h3>Depression Counseling</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                </div>
+                <div class="card-image-2">
+                    <img src="./images/WhatsApp Image 2024-10-20 at 12.33.50 PM.jpeg" alt="Depression Counseling">
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="action-button">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="card-content-2">
+                    <!-- <p>ONLINE | OFFLINE</p> -->
+                    <h3>Couple Counseling</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                </div>
+                <div class="card-image-2">
+                    <img src="./images/WhatsApp Image 2024-10-20 at 12.35.32 PM.jpeg" alt="Couple Counseling">
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="action-button">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="card-content-2">
+                    <!-- <p>FULL ONLINE</p> -->
+                    <h3>Child Psychotherapy</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                </div>
+                <div class="card-image-2">
+                    <img src="./images/WhatsApp Image 2024-10-20 at 11.05.31 AM.jpeg" alt="Child Psychotherapy">
+                    <div class="border-bottom"></div>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="action-button">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SERVICES -->
+    </section>
+
+    <!-- FAQ -->
+    <div id="scrollFAQ" class="faq">
+        <div class="faq-section">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I choose the right legal professional for my needs?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Selecting the right professional depends on the type of legal issue you're facing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What qualifications do your professionals hold?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>All of our professionals are highly qualified and experienced in their respective fields. </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I schedule a consultation with a professional?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>You can easily schedule a consultation through our online booking system, or you can contact us via phone or email.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is the difference between mediation and arbitration?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Mediation is a non-binding process where a neutral mediator helps both parties reach an agreement. </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How much do your services cost?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Pricing varies depending on the type of service you need and the complexity of your case.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I get legal advice online or over the phone?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, many of our professionals offer remote consultations via phone, video call, or email.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long will it take to resolve my legal issue?
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>The timeline depends on the type of service and the complexity of your case. Simple matters like document notarization can be handled quickly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /FAQ -->
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-overlay">
+            <div class="cta-content">
+                <h2>Ready for your journey ahead?</h2>
+                <p>Your journey is just beginning. Whether it's new challenges, opportunities, or dreams ahead, we are here to walk beside you. Let’s explore what’s possible together.</p>
+                <a href="#" class="cta-button">LET'S TALK</a>
+            </div>
+        </div>
+    </section>
+    <!-- /CTA -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/sh.png" alt="Mind Space Logo" class="logo" />
+                    <span class="brand-highlight">LegalContent</span>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <hr>
+            <!-- <div class="footer-newsletter">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © MindSpace 2023. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div> -->
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+    <script src="script.js"></script>
+</body>
+</html>
